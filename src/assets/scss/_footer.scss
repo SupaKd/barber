@@ -1,0 +1,37 @@
+.footer {
+    background-color: #111;
+    color: #ffffff;
+    padding: 2rem 1rem;
+    margin-top: auto;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #ecf0f1;
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .footer {
+      padding: 2.5rem 2rem;
+      
+      .container {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .footer {
+      padding: 3rem 2rem;
+    }
+  }

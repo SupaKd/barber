@@ -1,0 +1,129 @@
+.home {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    color: #111;
+    background: #fff;
+    line-height: 1.6;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 8rem 1.5rem 6rem;
+    background-image: url("/hero.jpg"); // <-- correction
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .hero-content {
+      max-width: 900px;
+    }
+  
+    .hero-title {
+      font-size: 3rem;
+      color:#fff;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #f9f9f9;
+      margin-bottom: 2rem;
+    }
+  
+    .hero-btn {
+      padding: 1em 3rem;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 9999px;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+  
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+
+  .reservations-section {
+    .reservations-grid-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  
+  /* --- TABLET ≥ 768px --- */
+  @media (min-width: 768px) {
+    .reservations-section {
+      .reservations-grid-layout {
+        grid-template-columns: 40% 60%;
+        gap: 1.5rem;
+      }
+    }
+  }
+  
+  /* --- DESKTOP ≥ 1024px --- */
+  @media (min-width: 1024px) {
+    .reservations-section {
+      .reservations-grid-layout {
+        grid-template-columns: 35% 65%;
+        gap: 2rem;
+      }
+    }
+  }
+  
+  /* --- GRAND ECRAN ≥ 1440px --- */
+  @media (min-width: 1440px) {
+    .reservations-section {
+      .reservations-grid-layout {
+        grid-template-columns: 30% 70%;
+        gap: 3rem;
+      }
+    }
+  }
+ 
+  /* ---------- MEDIA QUERIES ---------- */
+  @media (min-width: 768px) {
+    .hero {
+      padding: 10rem 2rem;
+      .hero-title {
+        font-size: 3rem;
+      }
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+    }
+  
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero {
+      .hero-title {
+        font-size: 7rem;
+      }
+      .hero-subtitle {
+        font-size: 2rem;
+        max-width: 700px;
+      }
+      .hero-btn{
+        font-size: 2rem;
+        padding: 1.5rem 3rem;
+      }
+    }
+  }
+  

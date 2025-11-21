@@ -1,0 +1,111 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+
+  h2{
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .services-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+    align-items: stretch;
+
+    .left {
+      .large {
+        height: 100%;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .small {
+        flex: 1;
+      }
+    }
+
+    .service-card {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      h3 {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: rgba(0, 0, 0, 0.3);
+        transition: background 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+
+      &:hover h3 {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .double{
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;      
+    }
+  }
+
+  .rdv-btn {
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 1rem; // plus carré pour un rendu plein
+    padding: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; // ✅ prend toute la largeur du parent
+    max-width: 1000px; // ✅ s'aligne avec la grille
+    text-align: center;
+  
+    &:hover {
+      background: #222;
+      transform: translateY(-2px);
+    }
+    
+  }
+
+  @media (max-width: 768px) {
+    .services-layout {
+      grid-template-columns: 1fr;
+      .right {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
