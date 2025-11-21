@@ -11,8 +11,7 @@ function Home() {
         <div className="hero-content">
           <h1 className="hero-title">Redéfinissez votre style</h1>
           <p className="hero-subtitle">
-            Découvrez l’élégance et la précision du soin capillaire, dans une
-            ambiance inspirée du design et de la simplicité Apple.
+            Découvrez l’élégance et la précision du soin capillaire, en un seul endroit.
           </p>
           <Link to="/reservations">
             <button className="hero-btn">Réserver maintenant</button>
